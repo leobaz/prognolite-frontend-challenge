@@ -1,0 +1,15 @@
+.navbar {
+  background-color: #fff !important;
+  border-bottom: 3px solid #19b7d3;
+  color: #19b7d3 !important;
+  &-logo {
+    max-width: 120px;
+    height: auto;
+  }
+  &-collapse {
+    justify-content: flex-end;
+  }
+  .nav-link.disabled {
+    color: #19b7d3;
+  }
+}
