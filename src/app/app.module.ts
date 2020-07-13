@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FeaturesDisplayComponent } from './features-display/features-display.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +28,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    NgxChartsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

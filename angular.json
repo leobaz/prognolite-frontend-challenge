@@ -122,8 +122,13 @@
               "devServerTarget": "prognolite-frontend-challenge:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "prognolite-frontend-challenge"
 }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "prognolite-frontend-challenge": {
+      "hosting": {
+        "prognolite-frontend-challenge": [
+          "prognolite-frontend-challenge"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "prognolite-frontend-challenge"
+  }
+}
