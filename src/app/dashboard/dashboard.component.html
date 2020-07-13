@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="dashboard-title">Dashboard</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="chart-title">Article overview</h4>
+      <div class="chart-container">
+        <ngx-charts-bar-vertical-2d
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="ARTICLE_CHART_DATA"
+        [gradient]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="false"
+        [xAxisLabel]="'Date'">
+        </ngx-charts-bar-vertical-2d>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="chart-title">Forecast(turnover) overview</h4>
+      <ngx-charts-pie-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="STAFF_CHART_DATA"
+      [gradient]="true"
+      [legend]="false"
+      [labels]="true"
+      [doughnut]="false"
+      >
+      </ngx-charts-pie-chart>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="chart-title">Turnover overview</h4>
+      <ngx-charts-line-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [legend]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxis]="true"
+      [yAxis]="true"
+      [xAxisLabel]="'Date'"
+      [timeline]="true"
+      [results]="STAFF_TURNOVER_CHART"
+      >
+    </ngx-charts-line-chart>
+    </div>
+  </div>
+</div>
+

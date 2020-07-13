@@ -1,1 +1,32 @@
 <app-navbar></app-navbar>
+<div class="container">
+  <div class="row package-container">
+    <div class="col-lg-4 col-md-12 col-xs-12 col-12">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Staff forecast</h5>
+          <p class="card-text">Optimize staff planning</p>
+          <a [routerLink]="['/forecast/staff']" class="btn btn-primary">Start planning</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-12  col-xs-12 col-12">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Article forecast</h5>
+          <p class="card-text">Reduce food waste</p>
+          <a [routerLink]="['/forecast/article']" class="btn btn-primary">Start reducing</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-12  col-xs-12 col-12">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Dashboard</h5>
+          <p class="card-text">Data about turnover, articles, staff.</p>
+          <a routerLink="/dashboard" class="btn btn-primary">Go to dashboard</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

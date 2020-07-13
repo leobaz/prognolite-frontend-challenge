@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="features-title">{{ title }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <select class="restaurant-picker custom-select custom-select-sm" (change)="selectRestaurant($event.target.value)" [(ngModel)]="selectedRestaurant">
+        <option *ngFor="let restaurant of restaurants" [value]="restaurant.value">{{restaurant.name}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 table-container">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Forecast(turnover)</th>
+          <th scope="col">Turnover</th>
+          <th scope="col" *ngIf="package === 'article'">Forecast wok</th>
+          <th scope="col" *ngIf="package === 'article'">Cashier wok</th>
+          <th scope="col">Forecast(staff)</th>
+          <th scope="col">Public & School holidays</th>
+          <th scope="col">Weather</th>
+
+        </tr>
+        </thead>
+        <tbody *ngIf="package === 'staff'">
+        <tr *ngFor="let staff of staff; index as i">
+          <td>
+            {{ staff.date }}
+          </td>
+          <td>{{ staff.forecast }}</td>
+          <td>{{ staff.turnover }}</td>
+          <td class="staff-column">{{ staff.staff }}</td>
+          <td>
+            <span *ngIf="staff.holidays">
+              {{ staff.holidays }}
+            </span>
+            <span *ngIf="!staff.holidays">
+              -
+            </span>
+          </td>
+          <td>{{ staff.weather }}</td>
+        </tr>
+        </tbody>
+        <tbody *ngIf="package === 'article'">
+          <tr *ngFor="let article of articles; index as i">
+            <td>
+              {{ article.date }}
+            </td>
+            <td>{{ article.forecast }}</td>
+            <td>{{ article.turnover }}</td>
+            <td>{{ article.forecastWok }}</td>
+            <td>{{ article.cashierWok }}</td>
+            <td class="staff-column">{{ article.staff }}</td>
+            <td>
+              <span *ngIf="article.holidays">
+                {{ article.holidays }}
+              </span>
+              <span *ngIf="!article.holidays">
+                -
+              </span>
+            </td>
+            <td>{{ article.weather }}</td>
+          </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>

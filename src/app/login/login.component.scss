@@ -1,6 +1,8 @@
+@import "~src/assets/styles/colors";
+
 .login-container {
-  background-color: #151B25;
-  min-height: 100vw;
+  background-color: $second-color;
+  min-height: 100vh;
   .container {
     padding-top: 10%;
     .login-section {

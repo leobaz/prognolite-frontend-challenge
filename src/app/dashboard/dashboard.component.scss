@@ -1,0 +1,23 @@
+@import "~src/assets/styles/colors";
+
+.container {
+  padding-top: 2%;
+  padding-bottom: 3%;
+  .dashboard-title {
+    text-align: center;
+    color: $font-color;
+  }
+  .restaurant-picker {
+    width: 20%;
+    margin-top: 5%;
+  }
+  .chart-title {
+    text-align: center;
+    padding-top: 5%;
+    color: $font-color;
+    padding-bottom: 3%;
+  }
+  .chart-container {
+    margin: 0 auto;
+  }
+}
